@@ -23,9 +23,9 @@ guild_ids = [YOURSERVERID]
 WebsiteStatus = namedtuple('WebsiteStatus', ['status_code', 'reason'])
 names = ['YOURWEBSITEHERE'] #By default all websites are .ml, to change this change the code further down
 
-api = genius.Genius('config.api)
+api = genius.Genius('config.api) # genius API
 
-description = '''IAJ's Python Bot - Still in testing\nNote All commands are NOT case sensative.'''
+
 bot = commands.Bot(command_prefix='.', description=description, case_insensitive = True,) #intents=intents)
 
 image_types=('.jpg','.png','.gif','.jpeg') #add image types if needed
@@ -42,7 +42,7 @@ extensions = [  # Cogs
 	'cogs.tests' 
 ]
 
-if __name__ == '__main__':  
+if __name__ == '__main__':  #loads cogs
 	for extension in extensions:
 		bot.load_extension(extension) 
 
@@ -67,12 +67,12 @@ async def kill(ctx, user : discord.Member):
   else:
     await ctx.send("Killed " + user.mention)
 
-@bot.command()
+@bot.command() #picks a quote, to use please put quotes in quote.txt
 async def quote(ctx):
     line = random.choice(open('texts/quote.txt').readlines())
     await ctx.send(line)
 
-@bot.command()
+@bot.command() #picks a quote, to use please put names in name.txt
 async def fortune(ctx):
     line = random.choice(open('texts/name.txt').readlines())
     will = random.choice(open('texts/will.txt').readlines())
