@@ -1191,6 +1191,6 @@ async def savelyrics(ctx, artist,*, title):
 
 bot.add_cog(Music(bot))
 
-keep_alive.keep_alive()
+#keep_alive.keep_alive()
 
 bot.run('ODA4NzEzMzQ0MDI2NDExMDY5.YCKi_g.f8NrqPI2NtCtzIoER_pV-d05rtQ')  
