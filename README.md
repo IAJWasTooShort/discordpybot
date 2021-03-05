@@ -3,6 +3,9 @@
 
 A python discord bot
 
+If you use this you must leave the Credits command as it is and dont claim to have made this bot from scratch. If you distrubute a modified version of this please credit me for creating the original.
+
+
 ## Installation
 
 Clone the Repo and install requirements:
