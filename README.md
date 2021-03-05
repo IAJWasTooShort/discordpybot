@@ -2,6 +2,7 @@
 ![tests](https://img.shields.io/badge/Tests-Passing-sucess)
 
 A python discord bot for my private sever
+For a blank version with none of my stuff use the "blank" branch
 
 ## Installation
 
