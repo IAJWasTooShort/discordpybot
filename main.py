@@ -15,6 +15,8 @@ import youtube_dl
 from async_timeout import timeout
 import lyricsgenius as genius
 
+import config
+
 youtube_dl.utils.bug_reports_message = lambda: ''
 
 cogs_folder = "./cogs"
@@ -23,7 +25,7 @@ guild_ids = [766180992150274048]
 WebsiteStatus = namedtuple('WebsiteStatus', ['status_code', 'reason'])
 names = ['alphoneclient']
 
-api = genius.Genius('TDbZbNJiKKhyJvLMK1FoZbMaEs6Nq1PCCyXo2tiBzjGTZ7oSSKPPvqo0wy-s5kuL')
+api = genius.Genius('config.api)
 
 description = '''IAJ's MCIsAGame Bot - Still in testing\nNote All commands are NOT case sensative.'''
 bot = commands.Bot(command_prefix='.', description=description, case_insensitive = True,) #intents=intents)
@@ -1191,6 +1193,6 @@ async def savelyrics(ctx, artist,*, title):
 
 bot.add_cog(Music(bot))
 
-#keep_alive.keep_alive()
+keep_alive.keep_alive()
 
-bot.run('ODA4NzEzMzQ0MDI2NDExMDY5.YCKi_g.f8NrqPI2NtCtzIoER_pV-d05rtQ')  
+bot.run(config.token)
